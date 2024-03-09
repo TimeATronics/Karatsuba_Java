@@ -1,0 +1,36 @@
+Object Oriented Programming in Java
+Assignment 1
+
+To implement a container for arbitrarily large binary numbers and implement arithmetic operations for them.
+(This approach uses character arrays)
+
+Usage:
+1.
+java -jar .\bin\BinOpsProj.jar run <input_file>
+(Creates output.txt, containing sum and product)
+
+2.
+java -jar .\bin\BinOpsProj.jar test
+(Creates random binary strings of various sizes and profiles the naive and fast multiplication algorithms. Two 2D plots are created with the running times of the naive and the fast implementations (naive.jpeg, fast.jpeg))
+
+Note:
+Naive multiplication of binary numbers has a time complexity of O(N^2) as can be observed from the plot.
+Fast multiplication of binary numbers using Karatsuba algorithm has a time complexity of O(N^1.58).
+
+Build Instructions:
+
+Compilation:
+cd src
+javac -d ..\bin\ -cp ..\lib\jfreechart-1.5.4.jar:. com\aradhya\binproj\*.java
+
+Jar Release:
+cd bin
+jar cvfe BinOpsProj.jar com.aradhya.binproj.Driver com\aradhya\binproj\*.class org\*
+
+
+Submitted By:
+Aradhya Chakrabarti
+2205880
+CSE-20
+Spring 2023-24
+(School of Computer Engineering, KIIT-DU)
